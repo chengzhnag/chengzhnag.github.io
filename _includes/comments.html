@@ -1,0 +1,6 @@
+{%- case site.comment.provider -%}
+{%- when 'static' -%}
+{% include comment/static/comments.html %}
+{%- when 'disqus' -%}
+{% include comment/disqus.html %}
+{%- endcase -%}

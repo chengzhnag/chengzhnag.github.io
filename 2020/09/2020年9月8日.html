@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Webpack-前端工程化之动态导入文件 | 记沉</title>
+    <meta name="generator" content="VuePress 1.5.3">
+    
+    <meta name="description" content="当我买得起十几块钱一个的冰淇淋的时候，我已经不再天天想吃了。当我可以随便玩电脑而没人管的时候，我已经懒得打开电脑了">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <link rel="preload" href="/assets/css/0.styles.33435127.css" as="style"><link rel="preload" href="/assets/js/app.4834e10e.js" as="script"><link rel="preload" href="/assets/js/3.144fe328.js" as="script"><link rel="preload" href="/assets/js/1.ed567aaa.js" as="script"><link rel="preload" href="/assets/js/12.063c88f0.js" as="script"><link rel="prefetch" href="/assets/js/10.e971964a.js"><link rel="prefetch" href="/assets/js/11.26038d90.js"><link rel="prefetch" href="/assets/js/13.3a79c594.js"><link rel="prefetch" href="/assets/js/4.92e8882b.js"><link rel="prefetch" href="/assets/js/5.60a579d7.js"><link rel="prefetch" href="/assets/js/6.64aab08c.js"><link rel="prefetch" href="/assets/js/7.84d0c2d1.js"><link rel="prefetch" href="/assets/js/8.8536e126.js"><link rel="prefetch" href="/assets/js/9.56787d2a.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.33435127.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-1c920fb4><div data-v-1c920fb4><div id="loader-wrapper" class="loading-wrapper" data-v-71fac282 data-v-1c920fb4 data-v-1c920fb4><div class="loader-main" data-v-71fac282><div data-v-71fac282></div><div data-v-71fac282></div><div data-v-71fac282></div><div data-v-71fac282></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-6ef27168 data-v-1c920fb4 data-v-1c920fb4><h3 class="title" style="display:none;" data-v-6ef27168 data-v-6ef27168>记沉</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-6ef27168 data-v-6ef27168><input type="password" value="" data-v-6ef27168> <span data-v-6ef27168>Konck! Knock!</span> <button data-v-6ef27168>OK</button></label> <div class="footer" style="display:none;" data-v-6ef27168 data-v-6ef27168><span data-v-6ef27168><i class="iconfont reco-theme" data-v-6ef27168></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-6ef27168>vuePress-theme-reco</a></span> <span data-v-6ef27168><i class="iconfont reco-copyright" data-v-6ef27168></i> <a data-v-6ef27168><span data-v-6ef27168>张沉</span>
+            
+          <!---->
+          2020
+        </a></span></div></div> <div class="hide" data-v-1c920fb4><header class="navbar" data-v-1c920fb4><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/avatar.jpg" alt="记沉" class="logo"> <span class="site-name">记沉</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/前端/" class="nav-link"><i class="iconfont undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/随笔/" class="nav-link"><i class="iconfont undefined"></i>
+  随笔
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div><div class="nav-item"><a href="https://github.com/chengzhnag" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-1c920fb4></div> <aside class="sidebar" data-v-1c920fb4><div class="personal-info-wrapper" data-v-44c89ab2 data-v-1c920fb4><img src="/avatar.jpg" alt="author-avatar" class="personal-img" data-v-44c89ab2> <h3 class="name" data-v-44c89ab2>
+    张沉
+  </h3> <div class="num" data-v-44c89ab2><div data-v-44c89ab2><h3 data-v-44c89ab2>3</h3> <h6 data-v-44c89ab2>Article</h6></div> <div data-v-44c89ab2><h3 data-v-44c89ab2>3</h3> <h6 data-v-44c89ab2>Tag</h6></div></div> <hr data-v-44c89ab2></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/前端/" class="nav-link"><i class="iconfont undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/随笔/" class="nav-link"><i class="iconfont undefined"></i>
+  随笔
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div><div class="nav-item"><a href="https://github.com/chengzhnag" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-6ef27168 data-v-1c920fb4><h3 class="title" style="display:none;" data-v-6ef27168 data-v-6ef27168>Webpack-前端工程化之动态导入文件</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-6ef27168 data-v-6ef27168><input type="password" value="" data-v-6ef27168> <span data-v-6ef27168>Konck! Knock!</span> <button data-v-6ef27168>OK</button></label> <div class="footer" style="display:none;" data-v-6ef27168 data-v-6ef27168><span data-v-6ef27168><i class="iconfont reco-theme" data-v-6ef27168></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-6ef27168>vuePress-theme-reco</a></span> <span data-v-6ef27168><i class="iconfont reco-copyright" data-v-6ef27168></i> <a data-v-6ef27168><span data-v-6ef27168>张沉</span>
+            
+          <!---->
+          2020
+        </a></span></div></div> <div data-v-1c920fb4><main class="page"><div class="page-title" style="display:none;"><h1>Webpack-前端工程化之动态导入文件</h1> <div data-v-d5d1b660><i class="iconfont reco-account" data-v-d5d1b660><span data-v-d5d1b660>张沉</span></i> <i class="iconfont reco-date" data-v-d5d1b660><span data-v-d5d1b660>2020-09-08</span></i> <!----> <i class="iconfont reco-tag tags" data-v-d5d1b660><span class="tag-item" data-v-d5d1b660>webpack</span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><p>最近在工作中遇到一个问题. <strong>动态导入文件</strong></p> <p>那我们怎么做到这一点呢, 我的想法是通过<strong>webpack</strong>来实现</p> <p>因为以前在做vue项目的时候遇到过这个情况, 如下所示:</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">'vue'</span>
+<span class="token keyword">import</span> Vuex <span class="token keyword">from</span> <span class="token string">'vuex'</span>
+<span class="token keyword">import</span> getters <span class="token keyword">from</span> <span class="token string">'./getters'</span>
+
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>Vuex<span class="token punctuation">)</span>
+
+<span class="token comment">// https://webpack.js.org/guides/dependency-management/#requirecontext</span>
+<span class="token keyword">const</span> modulesFiles <span class="token operator">=</span> require<span class="token punctuation">.</span><span class="token function">context</span><span class="token punctuation">(</span><span class="token string">'./modules'</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token regex">/\.js$/</span><span class="token punctuation">)</span>
+
+<span class="token comment">// you do not need `import app from './modules/app'`</span>
+<span class="token comment">// it will auto require all vuex module from modules file</span>
+<span class="token keyword">const</span> modules <span class="token operator">=</span> modulesFiles<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">modules<span class="token punctuation">,</span> modulePath</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token comment">// set './app.js' =&gt; 'app'</span>
+  <span class="token keyword">const</span> moduleName <span class="token operator">=</span> modulePath<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex">/^\.\/(.*)\.\w+$/</span><span class="token punctuation">,</span> <span class="token string">'$1'</span><span class="token punctuation">)</span>
+  <span class="token keyword">const</span> value <span class="token operator">=</span> <span class="token function">modulesFiles</span><span class="token punctuation">(</span>modulePath<span class="token punctuation">)</span>
+  modules<span class="token punctuation">[</span>moduleName<span class="token punctuation">]</span> <span class="token operator">=</span> value<span class="token punctuation">.</span>default
+  <span class="token keyword">return</span> modules
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> store <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vuex<span class="token punctuation">.</span>Store</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  modules<span class="token punctuation">,</span>
+  getters
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> store
+
+</code></pre></div><p>上面这段代码的作用就是把同级目录modules下的js文件全部取到, 然后通过自带的keys()方法遍历自动导入这些js文件</p> <hr> <p>上面代码中, 我们的主角就是 <strong>require.context</strong></p> <blockquote><p>require.context是Webpack中用来管理依赖的一个函数,此方法会生成一个上下文模块,包含目录下所有模块的引用,通过正则表达式匹配,然后require进来</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code> require.context('.', false, /\.vue$/)
+</code></pre></div><p>此方法有三个参数,
+参数一:要查询的目录,上述代码指的是当前目录
+参数二: 是否要查询子孙目录,方法默认的值为false
+参数三:要匹配的文件的后缀,是一个正则表达式,上述我要查询的是.vue文件</p> <p>require.context模块返回一个函数，这个函数可以接收一个参数</p> <p>导出的方法有 3 个属性： resolve, keys, id。
+resolve 是一个函数，它返回请求被解析后得到的模块 id。
+keys 也是一个函数，它返回一个数组，由所有可能被上下文模块处理的请求组成。
+id 是上下文模块里面所包含的模块 id. 它可能在你使用 module.hot.accept 的时候被用到</p> <hr> <h3 id="实现"><a href="#实现" class="header-anchor">#</a> 实现</h3> <p>目录结构:</p> <div class="language- extra-class"><pre class="language-text"><code>|modules
+|—common
+|——common.js
+|—file
+|——file.js
+|—scan
+|——scan.js
+|bridge.js
+|index.js
+|package.json
+</code></pre></div><p>modules/scan/scan.js文件:</p> <div class="language- extra-class"><pre class="language-text"><code>import bridge from &quot;../../bridge.js&quot;;
+
+export default {
+  scan: params =&gt; {
+    return new Promise((resolve, reject) =&gt; {
+      bridge.callHandler(&quot;scan&quot;, [params], function (res) {
+        if (res.code == 1) {
+          resolve(res.data);
+        } else {
+          reject(res.message);
+        }
+      });
+    });
+  }
+};
+</code></pre></div><p>index.js文件:</p> <div class="language- extra-class"><pre class="language-text"><code>const modulesFiles = require.context('./modules', true, /\.js$/)
+
+const modules = modulesFiles.keys().reduce((modules, modulePath) =&gt; {
+  const value = modulesFiles(modulePath).default
+  // 合并所有modules文件夹下的js export default {...}
+  modules = Object.assign({}, modules, value); 
+  return modules
+}, {})
+
+export default window.xhyBridge = modules;
+</code></pre></div><p>package.json文件:</p> <div class="language- extra-class"><pre class="language-text"><code>{
+  &quot;name&quot;: &quot;bridge-demo&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;description&quot;: &quot;for bridge&quot;,
+  &quot;main&quot;: &quot;index.js&quot;,
+  &quot;scripts&quot;: {
+    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;,
+    &quot;start&quot;: &quot;webpack index.js -o dist/xhyBridge.js&quot;
+  },
+  &quot;author&quot;: &quot;zs&quot;,
+  &quot;license&quot;: &quot;ISC&quot;,
+  &quot;devDependencies&quot;: {
+    &quot;webpack&quot;: &quot;^4.44.1&quot;,
+    &quot;webpack-cli&quot;: &quot;^3.3.12&quot;
+  }
+}
+
+</code></pre></div><p>最后通过命令把index.js打包到dist/xhyBridge.js</p> <div class="language- extra-class"><pre class="language-text"><code>npm start
+</code></pre></div><p>&quot;how are you &quot; &quot; ̶s̶a̶d̶,̶ ̶b̶r̶o̶k̶e̶n̶,̶ ̶d̶e̶f̶e̶a̶t̶e̶d̶,̶ ̶c̶r̶u̶s̶h̶e̶d̶,̶ ̶l̶o̶n̶e̶l̶y̶,̶ ̶f̶a̶l̶l̶i̶n̶g̶ ̶a̶p̶a̶r̶t̶ i'm fine. &quot;</p></div> <footer class="page-edit" style="display:none;"><!----> <!----></footer> <!----> <!----> <!----></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-2a0afe42 data-v-2a0afe42><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-2a0afe42><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-2a0afe42></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-2a0afe42></path></svg></div><div></div></div></div>
+    <script src="/assets/js/app.4834e10e.js" defer></script><script src="/assets/js/3.144fe328.js" defer></script><script src="/assets/js/1.ed567aaa.js" defer></script><script src="/assets/js/12.063c88f0.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "张三的记录博客",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "start": "node ./bin/www"
+  },
+  "author": "zs",
+  "license": "ISC",
+  "devDependencies": {
+    "vuepress": "^1.5.3",
+    "vuepress-plugin-dynamic-title": "^1.0.0",
+    "vuepress-theme-reco": "^1.5.5"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "time-formater": "^1.1.3"
+  }
+}

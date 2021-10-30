@@ -9,7 +9,7 @@ router.get('/', function (req, res, next) {
 
 router.post('/record', async (req, res, next) => {
   let body = req.body;
-  createNewBlog(body).then(res => {
+  createNewBlog(body).then(() => {
     return res.status(200).json({
       code: 1,
       success: true,

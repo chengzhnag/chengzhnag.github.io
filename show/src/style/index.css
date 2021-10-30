@@ -1,0 +1,5 @@
+@media (min-width: 320px) and (max-width: 768px) {
+    .el-message-box {
+        width: 96% !important;
+    }
+}

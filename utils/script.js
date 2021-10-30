@@ -106,14 +106,14 @@ ${content}
       console.log('正在复制打包后的html文件到根目录');
       copyHtmlToRoot(getAbsoluteAdr('../dist'), getAbsoluteAdr('../'));
       console.log('正在提交代码到github');
-      await exec(`git commit -am "feat: 新增一篇名为'${title}'的博客"`, { cwd: getAbsoluteAdr('../') });
+      await exec(`git add .`, { cwd: getAbsoluteAdr('../') });
+      await exec(`git commit -m "feat: 新增一篇名为'${title}'的博客"`, { cwd: getAbsoluteAdr('../') });
       await exec(`git push origin master`, { cwd: getAbsoluteAdr('../') });
       resolve(true);
     } catch (err) {
       reject(err.message || err);
     }
   })
-
 }
 
 module.exports = {

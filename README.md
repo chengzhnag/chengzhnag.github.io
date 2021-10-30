@@ -9,15 +9,13 @@ vuepress-theme-reco(主题)
 
 #### 安裝教程
 
-1.  git clone https://gitee.com/zs_w/deep-blog.git
-2.  cd ***
+1.  git clone https://github.com/chengzhnag/chengzhnag.github.io.git
+2.  cd chengzhnag.github.io.git
 3.  npm install
-4.  npm run dev
-5.  npm run build
+4.  npm run start
 
 #### 使用說明
 
-1.  在docs目录下按照年份/月份/日期创建.md文件
-2.  执行打包命令
-3.  docs\.vuepress\dist 目录下丢到服务器上
+1.  Node服务运行后当前ip:3000端口会有一个写博客的页面
+2.  写完后点击提交按钮即可，会自动构建博客静态资源文件并且提交github
 

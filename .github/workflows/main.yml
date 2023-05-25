@@ -1,0 +1,40 @@
+name: Auto Deploy Blog
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+      
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.7.0]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      - name: npm install
+        run: npm install
+
+      - name: Build
+        run: npm run build
+
+      - uses: actions/upload-pages-artifact@v1
+        with:
+            path: .vuepress/dist
+
+      - name: Deploy
+        uses: actions/deploy-pages@v1

@@ -34,8 +34,8 @@ module.exports = {
 			icon: 'reco-github'
 		}],
 		valineConfig: {
-			appId: process.env.APPID,// your appId
-			appKey: process.env.APPKEY, // your appKey
+			appId: `${process.env.APPID}`,// your appId
+			appKey: `${process.env.APPKEY}`, // your appKey
 		}
 	},
 	head: [

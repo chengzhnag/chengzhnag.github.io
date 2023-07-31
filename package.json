@@ -12,7 +12,6 @@
   "devDependencies": {
     "vuepress": "^1.5.3",
     "vuepress-plugin-dynamic-title": "^1.0.0",
-    "vuepress-theme-reco": "^1.5.5",
-    "vuepress-plugin-comment": "^0.7.3"
+    "vuepress-theme-reco": "^1.5.5"
   }
 }

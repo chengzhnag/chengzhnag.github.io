@@ -39,5 +39,21 @@ module.exports = {
 			name: 'viewport',
 			content: 'width=device-width,initial-scale=1,user-scalable=no'
 		}]
+	],
+	plugins: [
+		[
+		  'vuepress-plugin-comment',
+		  {
+			choosen: 'valine', 
+			// options选项中的所有参数，会传给Valine的配置
+			options: {
+				el: '.comments-wrapper',
+				appId: '7S5hBwAngzzkzrWUNw6PlrMI-MdYXbMMI',
+				appKey: 'EkRGQOttPmDoOaNwjLcrw0hZ',
+				visitor: true,
+				avatar: 'retro'
+			}
+		  }
+		]
 	]
 }

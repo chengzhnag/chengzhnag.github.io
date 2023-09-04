@@ -34,8 +34,8 @@ module.exports = {
 			icon: 'reco-github'
 		}],
 		valineConfig: {
-			appId: 'r5i945hNDZQeyUfXxdvsUEyy-9Nh9j0Va',// your appId
-      		appKey: 'kbD3OVvXWgCC2l3rF8jXGL3P', // your appKey
+			appId: 'VYEki932OAJDyS1BBJdZD6g1-gzGzoHsz',// your appId
+      		appKey: 'eA6lxTbX7jYlLmItrOSgz9mh', // your appKey
 		}
 	},
 	head: [

@@ -188,6 +188,7 @@ ${this.content}
   margin-right: 10px;
   padding: 8px 5px;
   width: 100%;
+  box-sizing: border-box;
   border: 1px solid #ccc !important;
   border-radius: 4px !important;
 }

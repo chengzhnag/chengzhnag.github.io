@@ -13,5 +13,10 @@
     "vuepress": "^1.5.3",
     "vuepress-plugin-dynamic-title": "^1.0.0",
     "vuepress-theme-reco": "^1.5.5"
+  },
+  "dependencies": {
+    "@kangc/v-md-editor": "^1.7.12",
+    "highlight.js": "^11.10.0",
+    "js-base64": "^3.7.7"
   }
 }

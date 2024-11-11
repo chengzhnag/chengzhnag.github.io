@@ -22,6 +22,10 @@ jobs:
         with:
           node-version: 12.7.0
       
+      - name: Set environment variables
+        run: |
+          echo "const token = '${{ secrets.REPO_TOKEN }}';export default token;" > utils/index.js
+
       - name: npm install
         run: npm install
 

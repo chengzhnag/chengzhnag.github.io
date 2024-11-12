@@ -1,5 +1,13 @@
 const path = require('path');
 
+const autometa_options = {
+	site: {
+		name: "chengzhnag",
+		twitter: "chengzhnag",
+	},
+	canonical_base: "https://chengzhnag.github.io/",
+};
+
 module.exports = {
 	title: '记沉',
 	description: '当我买得起十几块钱一个的冰淇淋的时候，我已经不再天天想吃了。当我可以随便玩电脑而没人管的时候，我已经懒得打开电脑了',
@@ -47,5 +55,17 @@ module.exports = {
 			name: 'google-site-verification',
 			content: 'ZMQqk7u0muxaqtq60ZUDzCg8S7s01pVy-IWEKH6TT-8'
 		}]
-	]
+	],
+  "plugins": [
+    ["autometa", autometa_options],
+    [
+      "sitemap",
+      {
+        hostname: "https://chengzhnag.github.io/",
+        // 排除无实际内容的页面
+        exclude: ["/404.html"],
+      },
+    ],
+    "vuepress-plugin-baidu-autopush", // 百度自动推送
+  ]
 }

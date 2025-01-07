@@ -1,3 +1,2 @@
 User-agent: *
-allow: /
-sitemap: https://chengzhnag.github.io/sitemap.xml
+Allow: /

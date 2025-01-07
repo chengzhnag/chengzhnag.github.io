@@ -62,6 +62,7 @@ module.exports = {
       "vuepress-plugin-sitemap",
       {
         hostname: "https://chengzhnag.github.io/",
+	outFile: "sitemap.txt",
         // 排除无实际内容的页面
         exclude: ["/404.html"],
       },

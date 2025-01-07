@@ -58,15 +58,15 @@ module.exports = {
 	],
   "plugins": [
     ["autometa", autometa_options],
-    [
-      "vuepress-plugin-sitemap",
-      {
-        hostname: "https://chengzhnag.github.io/",
-		outFile: "sitemap-1.xml",
-        // 排除无实际内容的页面
-        exclude: ["/404.html"],
-      },
-    ],
+    // [
+    //   "vuepress-plugin-sitemap",
+    //   {
+    //     hostname: "https://chengzhnag.github.io/",
+	// 	outFile: "sitemap-1.xml",
+    //     // 排除无实际内容的页面
+    //     exclude: ["/404.html"],
+    //   },
+    // ],
     "vuepress-plugin-baidu-autopush", // 百度自动推送
   ]
 }

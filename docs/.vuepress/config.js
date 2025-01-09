@@ -54,19 +54,19 @@ module.exports = {
 		['meta', {
 			name: 'google-site-verification',
 			content: 'ZMQqk7u0muxaqtq60ZUDzCg8S7s01pVy-IWEKH6TT-8'
-		}]
+		}],
+		['meta', { name: 'keywords', content: '记沉, 记沉博客, chengzhnag, @chengzhnag, chengzhnag blog' }],
 	],
   "plugins": [
     ["autometa", autometa_options],
-    // [
-    //   "vuepress-plugin-sitemap",
-    //   {
-    //     hostname: "https://chengzhnag.github.io/",
-	// 	outFile: "sitemap-1.xml",
-    //     // 排除无实际内容的页面
-    //     exclude: ["/404.html"],
-    //   },
-    // ],
+    [
+      "vuepress-plugin-sitemap",
+      {
+        hostname: "https://chengzhnag.github.io/",
+        // 排除无实际内容的页面
+        exclude: ["/404.html"],
+      },
+    ],
     "vuepress-plugin-baidu-autopush", // 百度自动推送
   ]
 }
